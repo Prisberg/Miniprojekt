@@ -8,6 +8,6 @@ The assignment is to create a calendar tool. The purpouse of the assignment is t
 https://prisberg.github.io/Miniprojekt/
 
 
-Simon Eriksson
-Christian Meiner
+Simon Eriksson,
+Christian Meiner,
 Philip Risberg
