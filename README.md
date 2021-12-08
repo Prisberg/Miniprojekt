@@ -5,7 +5,7 @@ Uppgiften utgår på att göra ett kalender-verktyg. Syftet med uppgiften är at
 
 The assignment is to create a calendar tool. The purpouse of the assignment is to practice javascript and co-operation in a team via github.
 
-(Github pages link)
+https://prisberg.github.io/Miniprojekt/
 
 
 Simon Eriksson
