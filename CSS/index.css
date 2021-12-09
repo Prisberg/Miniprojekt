@@ -3,9 +3,18 @@ body {
     width: 100vw;
 }
 
+.pageheader {
+    height: vh;
+}
+
+.leftright {
+    height: 98vh;
+    width: 100vw;
+}
+
 .left {
     background-color: aqua;
-    width: 40%;
+    width: 25%;
     height: 100;
 }
 
@@ -57,7 +66,7 @@ body {
 
 .right {
     background-color: brown;
-    width: 60%;
+    width: 75%;
     height: 100;
 }
 
