@@ -23,6 +23,8 @@ body {
 }
 
 .weekdaycontainer {
+    display: flex;
+    flex-direction: column;
     height: 200px;
     width: 100%;
     background-color: azure;
@@ -33,6 +35,10 @@ body {
 .weekday {
     background-color: red;
     padding: 10px;
+}
+.date { 
+    background-color: blue;
+    color: white;
 }
 
 .optionscontainer {
