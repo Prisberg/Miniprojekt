@@ -1,12 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kalender/Calendar</title>
+    <title>Calendar</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./CSS/common.css">
+    <link rel="stylesheet" href="./CSS/index.css">
+
+    <!-- JS -->
+    <script defer src=""></script>
 </head>
-<body>
+
+<body class="flex">
+    <!-- Left side, todo list and other options -->
+    <div class="left">
+        <div class="todocontainter">
+            <div class="weekdaycontainer justifycenter aligncenter flex">
+                <div class="weekday" id="currentweekday">Monday</div>
+            </div>
+            <div class="optionscontainer">
+                <div class="todocontainer flex flexcolumn">
+                    <div class="todoadd flex flexcolumn aligncenter" id="todoadd">
+                        <div class="todoaddheader">Add a todo</div>
+                        <ul class="dropdown">
+                            <li>Helgdag</li>
+                            <li>todo</li>
+                            <li>Evenemang</li>
+                        </ul>
+                    </div>
+                    <div class="currenttodo flex flexcolumn aligncenter" id="currenttodo">
+                        <div class="currenttodoheader">Your todo's</div>
+                        <ol>
+                            <li>Do this</li>
+                            <li>Do that</li>
+                            <li>And do this</li>
+                        </ol>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Right side, calendar and the different days -->
+    <div class="right">
+        <div class="calendarcontainer">
+            <div class="dayscontainer">
+                <ul class="days flex">
+                    <li>Monday</li>
+                    <li>Tuesday</li>
+                    <li>Wednesday</li>
+                    <li>Thursday</li>
+                    <li>Friday</li>
+                    <li>Saturday</li>
+                    <li>Sunday</li>
+                </ul>
+            </div>
+            <div class="calendar flex flexrow spacebetween">
+
+                <!-- CSS grid i framtiden-->
+                <div class="week1">
+                    <ul>
+                        <li>
+                            <div id=""></div>1</li>
+                        <li>
+                            <div id=""></div>2</li>
+                        <li>
+                            <div id=""></div>3</li>
+                        <li>
+                            <div id=""></div>4</li>
+                        <li>
+                            <div id=""></div>5</li>
+                        <li>
+                            <div id=""></div>6</li>
+                        <li>
+                            <div id=""></div>7</li>
+                    </ul>
+                </div>
+                <div class="week2"></div>
+                <ul>
+                    <li>
+                        <div id=""></div>8</li>
+                    <li>
+                        <div id=""></div>9</li>
+                    <li>
+                        <div id=""></div>10</li>
+                    <li>
+                        <div id=""></div>11</li>
+                    <li>
+                        <div id=""></div>12</li>
+                    <li>
+                        <div id=""></div>13</li>
+                    <li>
+                        <div id=""></div>14</li>
+                </ul>
+                <div class="week3"></div>
+                <ul>
+                    <li>
+                        <div id=""></div>15</li>
+                    <li>
+                        <div id=""></div>16</li>
+                    <li>
+                        <div id=""></div>17</li>
+                    <li>
+                        <div id=""></div>18</li>
+                    <li>
+                        <div id=""></div>19</li>
+                    <li>
+                        <div id=""></div>20</li>
+                    <li>
+                        <div id=""></div>21</li>
+                </ul>
+                <div class="week4">
+                    <ul>
+                        <li>
+                            <div id=""></div>22</li>
+                        <li>
+                            <div id=""></div>23</li>
+                        <li>
+                            <div id=""></div>24</li>
+                        <li>
+                            <div id=""></div>25</li>
+                        <li>
+                            <div id=""></div>26</li>
+                        <li>
+                            <div id=""></div>27</li>
+                        <li>
+                            <div id=""></div>28</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </body>
+
 </html>

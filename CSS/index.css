@@ -1,0 +1,82 @@
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
+.left {
+    background-color: aqua;
+    width: 40%;
+    height: 100;
+}
+
+.todocontainer {
+    height: 100%;
+}
+
+.weekdaycontainer {
+    height: 200px;
+    width: 100%;
+    background-color: azure;
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+.weekday {
+    background-color: red;
+    padding: 10px;
+}
+
+.optionscontainer {
+    height: 100%;
+}
+
+.todocontainer {
+    background-color: red;
+    height: 100%;
+}
+
+.todoadd {
+    background-color: cornflowerblue;
+}
+
+.todoaddheader {
+    font-size: larger;
+    font-weight: bold;
+}
+
+.currenttodo {
+    background-color: chartreuse;
+    width: 100%;
+    height: 100%;
+}
+
+.currenttodoheader {
+    font-size: larger;
+    font-weight: bold;
+}
+
+.right {
+    background-color: brown;
+    width: 60%;
+    height: 100;
+}
+
+.calendarcontainer {}
+
+.dayscontainer {
+    width: 100%;
+    background-color: cyan;
+}
+
+ul.days>li {
+    /* finns bättre sätt än % för att dem skall fylla perfekt */
+    width: 14%;
+    background-color: red;
+    text-align: center;
+}
+
+.calendar {
+    width: 100%;
+    height: 100%;
+    background-color: darkgreen;
+}
