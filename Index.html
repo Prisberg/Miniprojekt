@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="./CSS/mediaqueries.css">
 
     <!-- JS -->
-    <script defer src=""></script>
+    <script defer src="/toDo.js"></script>
 </head>
 
 <body class="">
@@ -28,20 +28,25 @@
                 <div class="optionscontainer">
                     <div class="todocontainer flex flexcolumn">
                         <div class="todoadd flex flexcolumn aligncenter" id="todoadd">
-                            <div class="todoaddheader">Add a todo</div>
-                            <ul class="dropdown">
+                            <div id="addToDo" class="todoaddheader">
+                                <h2>Add a to do</h2>
+                                <input type="text" maxlength="50" id="toDoTextArea" placeholder="Write your task here...">
+                                <span class="btnAddToDo">Add</span>
+                            </div>
+                            <!--Nödvändig?
+                             <ul class="dropdown">
                                 <li>Helgdag</li>
                                 <li>todo</li>
                                 <li>Evenemang</li>
-                            </ul>
+                            </ul> -->
                         </div>
                         <div class="currenttodo flex flexcolumn aligncenter" id="currenttodo">
-                            <div class="currenttodoheader">Your todo's</div>
-                            <ol>
-                                <li>DOnt DO THAT</li>
-                                <li>Do that</li>
-                                <li>And do this</li>
-                            </ol>
+                            <div class="currenttodoheader">Your to do's</div>
+                            <ul class="toDoUL" id="toDoItemsUL">
+                                <li class="toDoItems">Do this</li>
+                                <li class="toDoItems checked">Do that</li>
+                                <li class="toDoItems">And do this</li>
+                            </ul>
                         </div>
 
                     </div>
