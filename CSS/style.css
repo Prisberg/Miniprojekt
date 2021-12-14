@@ -1,97 +1,82 @@
+* {
+    margin: 0;
+}
+
 body {
-    height: 100vh;
-    width: 100vw;
-}
-
-.pageheader {
-    height: vh;
-}
-
-.leftright {
-    height: 98vh;
-    width: 100vw;
-}
-
-.left {
-    background-color: aqua;
-    width: 25%;
-    height: 100;
-}
-
-.todocontainer {
-    height: 100%;
-}
-
-.weekdaycontainer {
-    display: flex;
-    flex-direction: column;
-    height: 200px;
-    width: 100%;
-    background-color: azure;
-    font-weight: bolder;
-    font-size: 30px;
-}
-
-.weekday {
-    background-color: red;
-    padding: 10px;
-}
-.date { 
-    background-color: blue;
+    background-color: white;
     color: white;
-}
-
-.optionscontainer {
     height: 100%;
-}
-
-.todocontainer {
-    background-color: red;
-    height: 100%;
-}
-
-.todoadd {
-    background-color: cornflowerblue;
-}
-
-.todoaddheader {
-    font-size: larger;
-    font-weight: bold;
-}
-
-.currenttodo {
-    background-color: chartreuse;
     width: 100%;
+}
+
+.main-content {
+    width: 95vw;
+    height: 95vh;
+    margin: auto;
+    border: 1px black solid;
+}
+
+.left-side {
+    background-color: #181818;
+    width: 25%;
     height: 100%;
+    line-height: 2rem;
+}
+.todo-top {
+    padding: 1rem 0;
+    width: 100%;
 }
 
-.currenttodoheader {
-    font-size: larger;
-    font-weight: bold;
+.todo-list, .event-list {
+    width: 90%;
+    padding-bottom: 1rem;
 }
 
-.right {
-    background-color: brown;
+.todo-list-title, .event-list-title {
+    border: 2px red solid;
+    width: 100%;
+}
+
+.add-event {
+    color: red;
+    padding-top: 3rem;
+    font-size: xx-large;
+}
+
+.right-side {
+    background-color: #181818;
     width: 75%;
-    height: 100;
-}
-
-.calendarcontainer {}
-
-.dayscontainer {
-    width: 100%;
-    background-color: cyan;
-}
-
-ul.days>li {
-    /* finns bättre sätt än % för att dem skall fylla perfekt */
-    width: 14%;
-    background-color: red;
-    text-align: center;
-}
-
-.calendar {
-    width: 100%;
     height: 100%;
-    background-color: darkgreen;
+}
+
+.month-title {
+    gap: 1rem;
+}
+
+.days-of-week {
+    background-color: red;
+    padding: .5rem 0;
+    width: 100%;
+}
+.day-grid {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2px;
+    
+}
+
+.day-grid div {
+    background-color: white;
+}
+
+.day-grid div:hover {
+    background-color: lightsteelblue;
+    cursor: pointer;
+}
+
+#prev-month, #next-month, .add-event {
+    cursor: pointer;
 }
