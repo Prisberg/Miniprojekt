@@ -22,15 +22,15 @@
 </head>
 
 <body class="">
-    <div class="main-content">
-        <div class="left-side">
-            <div class="todo-top">
+    <div class="main-content flex">
+        <div class="left-side flex flexcolumn aligncenter">
+            <div class="todo-top textcenter flex flexcolumn">
                 <h2 id="currentweekday"></h2>
                 <h2 id="currentdate"></h2>
                 <h3 id="currenttime"></h3>
             </div>
             <div class="todo-list">
-                <div class="todo-list-title">
+                <div class="todo-list-title textcenter">
                     <h2>Dina todos för dagen</h2>
                 </div>
                 <div class="todo-list-content">
@@ -42,7 +42,7 @@
                 </div>
             </div>
             <div class="event-list">
-                <div class="event-list-title">
+                <div class="event-list-title textcenter">
                     <h2>Saker som händer idag</h2>
                 </div>
                 <div class="event-list-content">
@@ -57,16 +57,16 @@
                 <h1><i class="fas fa-plus-square"></i></h1>
             </div>
         </div>
-        <div class="right-side">
-            <div class="calendar-title">
+        <div class="right-side flex flexcolumn aligncenter">
+            <div class="calendar-title textcenter">
                 <h1>Min kalender.</h1>
             </div>
-            <div class="month-title">
+            <div class="month-title textcenter flex flexrow">
                 <h1 id="prev-month"><i class="fas fa-arrow-circle-left"></i></h1>
                 <h1 id="currentmonth"></h1>
                 <h1 id="next-month"><i class="fas fa-arrow-circle-right"></i></h1>
             </div>
-            <div class="days-of-week">
+            <div class="days-of-week flex spacearound">
                 <div>Måndag</div>
                 <div>Tisdag</div>
                 <div>Onsdag</div>
