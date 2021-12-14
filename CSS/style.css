@@ -1,97 +1,101 @@
+* {
+    margin: 0;
+}
+
 body {
-    height: 100vh;
-    width: 100vw;
-}
-
-.pageheader {
-    height: vh;
-}
-
-.leftright {
-    height: 98vh;
-    width: 100vw;
-}
-
-.left {
-    background-color: aqua;
-    width: 25%;
-    height: 100;
-}
-
-.todocontainer {
+    background-color: white;
+    color: white;
     height: 100%;
+    width: 100%;
 }
 
-.weekdaycontainer {
+.main-content {
+    width: 95vw;
+    height: 95vh;
+    margin: auto;
+    display: flex;
+    border: 1px black solid;
+}
+
+.left-side {
+    background-color: #181818;
+    width: 25%;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    height: 200px;
+    align-items: center;
+    line-height: 2rem;
+}
+.todo-top {
+    padding: 1rem 0;
+    text-align: center;
     width: 100%;
-    background-color: azure;
-    font-weight: bolder;
-    font-size: 30px;
+    display: flex;
+    flex-direction: column;
 }
 
-.weekday {
-    background-color: red;
-    padding: 10px;
-}
-.date { 
-    background-color: blue;
-    color: white;
+.todo-list, .event-list {
+    width: 90%;
+    padding-bottom: 1rem;
 }
 
-.optionscontainer {
-    height: 100%;
-}
-
-.todocontainer {
-    background-color: red;
-    height: 100%;
-}
-
-.todoadd {
-    background-color: cornflowerblue;
-}
-
-.todoaddheader {
-    font-size: larger;
-    font-weight: bold;
-}
-
-.currenttodo {
-    background-color: chartreuse;
+.todo-list-title, .event-list-title {
+    border: 2px red solid;
+    text-align: center;
     width: 100%;
-    height: 100%;
 }
 
-.currenttodoheader {
-    font-size: larger;
-    font-weight: bold;
+.add-event {
+    color: red;
+    padding-top: 3rem;
+    font-size: xx-large;
 }
 
-.right {
-    background-color: brown;
+.right-side {
+    background-color: #181818;
     width: 75%;
-    height: 100;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.calendarcontainer {}
-
-.dayscontainer {
-    width: 100%;
-    background-color: cyan;
-}
-
-ul.days>li {
-    /* finns bättre sätt än % för att dem skall fylla perfekt */
-    width: 14%;
-    background-color: red;
+.calendar-title, .month-title {
     text-align: center;
 }
 
-.calendar {
+.month-title {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.days-of-week {
+    background-color: red;
+    display: flex;;
+    justify-content: space-around;
+    padding: .5rem 0;
     width: 100%;
+}
+.day-grid {
+    display: grid;
     height: 100%;
-    background-color: darkgreen;
+    width: 100%;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2px;
+    
+}
+
+.day-grid div {
+    background-color: white;
+}
+
+.day-grid div:hover {
+    background-color: lightsteelblue;
+    cursor: pointer;
+}
+
+#prev-month, #next-month, .add-event {
+    cursor: pointer;
 }
