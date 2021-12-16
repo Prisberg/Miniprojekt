@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+}
+
+body {
+    background-color: white;
+    color: white;
+    height: 100%;
+    width: 100%;
+}
+
+.main-content {
+    width: 95vw;
+    height: 95vh;
+    margin: auto;
+    border: 1px black solid;
+}
+
+.left-side {
+    background-color: #181818;
+    width: 25%;
+    height: 100%;
+    line-height: 2rem;
+}
+.todo-top {
+    padding: 1rem 0;
+    width: 100%;
+}
+
+.todo-list, .event-list {
+    width: 90%;
+    padding-bottom: 1rem;
+}
+
+.todo-list-title, .event-list-title {
+    border: 2px red solid;
+    width: 100%;
+}
+
+.add-event {
+    color: red;
+    padding-top: 3rem;
+    font-size: xx-large;
+}
+
+.right-side {
+    background-color: #181818;
+    width: 75%;
+    height: 100%;
+}
+
+.month-title {
+    gap: 1rem;
+}
+
+.days-of-week {
+    background-color: red;
+    padding: .5rem 0;
+    width: 100%;
+}
+.day-grid {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2px;
+    
+}
+
+.day-grid div {
+    background-color: white;
+}
+
+.day-grid div:hover {
+    background-color: lightsteelblue;
+    cursor: pointer;
+}
+
+#prev-month, #next-month, .add-event {
+    cursor: pointer;
+}
+
+/*to do li interaction, tempStyling*/
+.toDoUL li {
+    cursor: pointer;
+    margin: 5px;
+    padding: 0px 1rem;
+    position: relative;
+    background: #eee;
+    transition: 0.2s;
+    user-select: none;
+}
+
+/* hover on to do li, tempStyling*/
+.currenttodo li:hover {
+    background: #ddd;
+}
+
+/* line through checked off to do's, tempStyling */
+li.checked {
+    background: #888;
+    color: #fff;
+    text-decoration: line-through;
+}
+
+/* Lägg till checkmark på checkade to do's, tempStyling*/
+li.checked::before {
+    left: 0%;
+    position: absolute;
+    content: '✔';
+}
+
+/* close button positioning */
+.close {
+    position: absolute;
+    right: 0;
+}
+
+/* tempStyling for "Add" button */
+.btnAddToDo {
+    padding: 10px;
+    background: #d9d9d9;
+    color: #555;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+    user-select: none;
+}
+  
+.btnAddToDo:hover {
+    background-color: #bbb;
+}
