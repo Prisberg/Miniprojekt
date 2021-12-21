@@ -1,16 +1,3 @@
-/* Universal css, resets margin & padding and sets the font family and text color so
-they're the same everywhere. */
-
-* {
-    margin: 0;
-    padding: 0;
-    color: black;
-}
-
-ul {
-    list-style: none;
-}
-
 
 /* Commonly used css attributes in their own class for easier
 and faster coding, names are selfexplanatory */
