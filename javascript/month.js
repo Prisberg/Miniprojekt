@@ -61,12 +61,6 @@ function renderCalendar() {
         let lastDayIndex = new Date(calendar.date.getFullYear(), calendar.date.getMonth() + 1, 0).getDay();
         let previousLastDay = new Date(calendar.date.getFullYear(), calendar.date.getMonth(), 0).getDate();
 
-        console.log(calendar);
-        console.log(lastDayIndex);
-        console.log(previousLastDay);
-        console.log(firstDayIndex);
-        console.log(daysInMonth);
-
         /** Clears each cell of data*/
         for (let cell of dateCells) {
             cell.innerHTML = "";
