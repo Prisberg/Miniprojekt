@@ -43,15 +43,6 @@ const weekdays = [
 
 function renderCalendar() {
     renderCells();
-    renderHeader();
-
-    /**-----Header---- */
-    function renderHeader() {
-        document.getElementById("calendarHeader").innerText =
-            months[calendar.month] + " " + +calendar.year;
-        document.querySelector(".today-text").innerHTML =
-            weekdays[new Date().getDay()] + " " + calendar.today;
-    }
 
     /**------Calendar body------- */
     function renderCells() {
