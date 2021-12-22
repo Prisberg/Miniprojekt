@@ -29,6 +29,10 @@ body {
     font-size: large;
 }
 
+.fa-plus {
+    margin-top: 2px;
+}
+
 .todo-top {
     padding: 1rem 0;
     text-align: center;
