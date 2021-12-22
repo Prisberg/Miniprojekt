@@ -2,11 +2,10 @@ window.addEventListener('load', main);
 
 function main() {
     renderCurrentTime();
-    renderCurrentMonth();
     renderCurrentDay();
     renderCurrentDate();
     endOfDateFix();
-    renderCalendarMonth();
+    renderCurrentMonth();
     setInterval(renderCurrentTime, 1000);
 }
 
@@ -32,7 +31,7 @@ function renderCurrentDate() {
 
 }
 
-function renderCurrentMonth()  {
+function renderCurrentMonth() {
     const month = ["Januari", "Februari", "Mars", "April", "Maj", "Juni", "Juli", "Augusti", "September", "Oktober", "November", "December"];
     const d = new Date();
 

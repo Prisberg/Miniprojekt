@@ -5,72 +5,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calendar</title>
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="/CSS/common.css">
-    <link rel="stylesheet" href="/CSS/style.css">
-    <link rel="stylesheet" href="/CSS/mediaqueries.css">
-
-    <!-- JS -->
-    <script defer src="/javascript/toDo.js"></script>
-    <script defer src="/javascript/days.js"></script>
-    <script defer src="/javascript/month.js"></script>
-
-    <!-- Iconset -->
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
-
+    <script defer src="./javascript/days.js"></script>
+    <script defer src="./javascript/month.js"></script>
+    <script defer src="./javascript/toDo.js"></script>
+    <link rel="stylesheet" href="./CSS/common.css">
+    <link rel="stylesheet" href="./CSS/mediaqueries.css">
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="./CSS/todo.css">
+    <title>Document</title>
 </head>
 
-<body class="">
-    <div class="main-content flex">
-        <div class="left-side flex flexcolumn aligncenter">
-            <div class="todo-top textcenter flex flexcolumn">
+<body>
+    <div class="main-content">
+        <div class="left-side">
+            <div class="todo-top">
                 <h2 id="currentweekday"></h2>
                 <h2 id="currentdate"></h2>
                 <h3 id="currenttime"></h3>
             </div>
-            <div class="todo-list">
-                <div class="todo-list-title textcenter">
-                    <h2>Dina to do's</h2>
-                </div>
-                <div class="todo-list-content" id="addToDo">
-                    <h2>lägg till to do</h2>
-                    <input type="text" maxlength="50" id="toDoTextArea" placeholder="Write your task here...">
-                    <span class="btnAddToDo">Lägg till</span>
-                    <ul class="toDoUL" id="toDoItemsUL">
-                        <li class="toDoItems">Do this</li>
-                        <li class="toDoItems checked">Do that</li>
-                        <li class="toDoItems">And do this</li>
-                    </ul>
-                </div>
-            </div>
-            <!--             <div class="event-list">
-                <div class="event-list-title textcenter">
-                    <h2>Saker som händer idag</h2>
-                </div>
-                <div class="event-list-content">
-                    <ul>
-                        <li>Mammas födelsedag</li>
-                        <li>Ottos namnsdag</li>
-                        <li>Annars då?</li>
-                    </ul>
-                </div>
-            </div> -->
-            <div class="add-event">
-                <h1><i class="fas fa-plus-square"></i></h1>
+            <div class="todo-content">
+                <form id="this-form">
+                    <fieldset>
+                        <legend>Lägg till dagens todo</legend>
+                        <div class="add-todo-field">
+                            <input autocomplete="off" type="text" name="" id="todo-input" placeholder="Din nya todo...">
+                            <button id="add-button"><i class="fas fa-plus"></i></button>
+                        </div>
+                    </fieldset>
+                </form>
+                <ul id="todo-list"></ul>
             </div>
         </div>
-        <div class="right-side flex flexcolumn aligncenter">
-            <div class="calendar-title textcenter">
+        <div class="right-side">
+            <div class="calendar-title">
                 <h1>Min kalender.</h1>
             </div>
-            <div class="month-title textcenter flex flexrow">
-                <h1 id="prev-month"><i class="fas fa-arrow-circle-left"></i></h1>
+            <div class="month-title">
                 <h1 id="currentmonth"></h1>
-                <h1 id="next-month"><i class="fas fa-arrow-circle-right"></i></h1>
             </div>
-            <div class="days-of-week flex spacearound largetext">
+            <div class="days-of-week">
                 <div>Måndag</div>
                 <div>Tisdag</div>
                 <div>Onsdag</div>
@@ -79,46 +54,10 @@
                 <div>Lördag</div>
                 <div>Söndag</div>
             </div>
-            <div class="day-grid">
-                <div class="date-cell"></div>
-                <div class="date-cell"></div>
-                <div class="date-cell"></div>
-                <div class="date-cell"></div>
-                <div class="date-cell"></div>
-                <div class="date-cell"></div>
-                <div class="date-cell"></div>
-                <div class="date-cell"></div>
-                <div class="date-cell"></div>
-                <div class="date-cell"></div>
-                <div class="date-cell"></div>
-                <div class="date-cell"></div>
-                <div class="date-cell"></div>
-                <div class="date-cell"></div>
-                <div class="date-cell"></div>
-                <div class="date-cell"></div>
-                <div class="date-cell"></div>
-                <div class="date-cell"></div>
-                <div class="date-cell"></div>
-                <div class="date-cell"></div>
-                <div class="date-cell"></div>
-                <div class="date-cell"></div>
-                <div class="date-cell"></div>
-                <div class="date-cell"></div>
-                <div class="date-cell"></div>
-                <div class="date-cell"></div>
-                <div class="date-cell"></div>
-                <div class="date-cell"></div>
-                <div class="date-cell"></div>
-                <div class="date-cell"></div>
-                <div class="date-cell"></div>
-                <div class="date-cell"></div>
-                <div class="date-cell"></div>
-                <div class="date-cell"></div>
-                <div class="date-cell"></div>
+            <div id="day-grid">
             </div>
         </div>
     </div>
-
 </body>
 
 </html>
