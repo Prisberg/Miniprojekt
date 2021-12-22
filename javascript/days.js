@@ -2,10 +2,11 @@ window.addEventListener('load', main);
 
 function main() {
     renderCurrentTime();
+    renderCurrentMonth();
     renderCurrentDay();
     renderCurrentDate();
     endOfDateFix();
-    renderCurrentMonth();
+    renderCalendarMonth();
     setInterval(renderCurrentTime, 1000);
 }
 
@@ -17,7 +18,7 @@ function renderCurrentDay() {
 
 function endOfDateFix(i) {
     var j = i % 10;
-    if (j == 1 && i != 11 || j == 2 && i != 12)  {
+    if (j == 1 && i != 11 || j == 2 && i != 12) {
         return i + ":a";
     }
     return i + ":e";
@@ -31,22 +32,22 @@ function renderCurrentDate() {
 
 }
 
-function renderCurrentMonth() {
+function renderCurrentMonth()  {
     const month = ["Januari", "Februari", "Mars", "April", "Maj", "Juni", "Juli", "Augusti", "September", "Oktober", "November", "December"];
     const d = new Date();
-    
+
     document.getElementById('currentmonth').innerHTML = month[d.getMonth()];
 }
 
 function renderCurrentTime() {
     const d = new Date();
 
-    document.getElementById('currenttime').innerHTML = "och klockan är " + d.toLocaleTimeString() +".";
+    document.getElementById('currenttime').innerHTML = "och klockan är " + d.toLocaleTimeString() + ".";
 }
 
 function showNextMonth() {
     const month = ["Januari", "Februari", "Mars", "April", "Maj", "Juni", "Juli", "Augusti", "September", "Oktober", "November", "December"];
     const d = new Date();
-    
-    document.getElementById('next-month').innerHTML = month[d.getMonth()] - 1 ;
+
+    document.getElementById('next-month').innerHTML = month[d.getMonth()] - 1;
 }

@@ -22,17 +22,20 @@ body {
     height: 100%;
     line-height: 2rem;
 }
+
 .todo-top {
     padding: 1rem 0;
     width: 100%;
 }
 
-.todo-list, .event-list {
+.todo-list,
+.event-list {
     width: 90%;
     padding-bottom: 1rem;
 }
 
-.todo-list-title, .event-list-title {
+.todo-list-title,
+.event-list-title {
     border: 2px red solid;
     width: 100%;
 }
@@ -58,6 +61,7 @@ body {
     padding: .5rem 0;
     width: 100%;
 }
+
 .day-grid {
     display: grid;
     height: 100%;
@@ -65,7 +69,12 @@ body {
     grid-template-rows: repeat(6, 1fr);
     grid-template-columns: repeat(7, 1fr);
     gap: 2px;
-    
+}
+
+.date-cell {
+    color: black;
+    text-align: center;
+    font-size: 23px;
 }
 
 .day-grid div {
@@ -77,11 +86,15 @@ body {
     cursor: pointer;
 }
 
-#prev-month, #next-month, .add-event {
+#prev-month,
+#next-month,
+.add-event {
     cursor: pointer;
 }
 
+
 /*to do li interaction, tempStyling*/
+
 .toDoUL li {
     cursor: pointer;
     margin: 5px;
@@ -92,32 +105,42 @@ body {
     user-select: none;
 }
 
+
 /* hover on to do li, tempStyling*/
+
 .currenttodo li:hover {
     background: #ddd;
 }
 
+
 /* line through checked off to do's, tempStyling */
+
 li.checked {
     background: #888;
     color: #fff;
     text-decoration: line-through;
 }
 
+
 /* Lägg till checkmark på checkade to do's, tempStyling*/
+
 li.checked::before {
     left: 0%;
     position: absolute;
     content: '✔';
 }
 
+
 /* close button positioning */
+
 .close {
     position: absolute;
     right: 0;
 }
 
+
 /* tempStyling for "Add" button */
+
 .btnAddToDo {
     padding: 10px;
     background: #d9d9d9;
@@ -127,7 +150,7 @@ li.checked::before {
     transition: 0.3s;
     user-select: none;
 }
-  
+
 .btnAddToDo:hover {
     background-color: #bbb;
 }
