@@ -12,7 +12,6 @@ function renderCalendarMonth() {
     calendar.today = calendar.date.getUTCDate();
     calendar.date.setDate(1);
     renderCalendar();
-    renderCalendarHolidays();
 }
 
 const months = [
