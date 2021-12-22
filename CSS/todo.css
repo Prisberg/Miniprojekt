@@ -55,7 +55,7 @@ li {
 #amount {
     position: absolute;
     color: red;
-    font-size: large;
+    font-size: 3vmin;
     margin-right: .2rem;
     bottom: 0;
     right: 0;
