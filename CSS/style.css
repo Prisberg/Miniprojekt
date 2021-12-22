@@ -1,5 +1,6 @@
 * {
     margin: 0;
+    overflow-x: hidden;
 }
 
 body {
@@ -13,6 +14,7 @@ body {
     width: 95vw;
     height: 95vh;
     margin: auto;
+    display: flex;
     border: 1px black solid;
 }
 
@@ -20,137 +22,88 @@ body {
     background-color: #181818;
     width: 25%;
     height: 100%;
-    line-height: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.4rem;
+    font-size: large;
 }
 
 .todo-top {
     padding: 1rem 0;
+    text-align: center;
     width: 100%;
-}
-
-.todo-list,
-.event-list {
-    width: 90%;
-    padding-bottom: 1rem;
-}
-
-.todo-list-title,
-.event-list-title {
-    border: 2px red solid;
-    width: 100%;
-}
-
-.add-event {
-    color: red;
-    padding-top: 3rem;
-    font-size: xx-large;
+    display: flex;
+    flex-direction: column;
+    line-height: 2rem;
 }
 
 .right-side {
     background-color: #181818;
     width: 75%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.calendar-title,
+.month-title {
+    text-align: center;
 }
 
 .month-title {
+    display: flex;
+    flex-direction: row;
     gap: 1rem;
 }
 
 .days-of-week {
     background-color: red;
+    display: flex;
+    ;
+    justify-content: space-around;
     padding: .5rem 0;
     width: 100%;
 }
 
-.day-grid {
+#day-grid {
     display: grid;
     height: 100%;
     width: 100%;
-    grid-template-rows: repeat(6, 1fr);
     grid-template-columns: repeat(7, 1fr);
     gap: 2px;
+    font-size: x-large;
 }
 
-.date-cell {
-    color: black;
-    text-align: center;
-    font-size: 23px;
+#oldday {
+    background-color: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.day-grid div {
-    background-color: white;
-}
-
-.day-grid div:hover {
-    background-color: lightsteelblue;
-    cursor: pointer;
-}
-
-#prev-month,
-#next-month,
-.add-event {
-    cursor: pointer;
-}
-
-
-/*to do li interaction, tempStyling*/
-
-.toDoUL li {
-    cursor: pointer;
-    margin: 5px;
-    padding: 0px 1rem;
+.today {
     position: relative;
-    background: #eee;
-    transition: 0.2s;
-    user-select: none;
+    background-color: #89CFF0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-
-/* hover on to do li, tempStyling*/
-
-.currenttodo li:hover {
-    background: #ddd;
+#day {
+    background-color: white;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-
-/* line through checked off to do's, tempStyling */
-
-li.checked {
-    background: #888;
-    color: #fff;
-    text-decoration: line-through;
+#day:hover {
+    background-color: lightsteelblue;
 }
 
-
-/* Lägg till checkmark på checkade to do's, tempStyling*/
-
-li.checked::before {
-    left: 0%;
-    position: absolute;
-    content: '✔';
-}
-
-
-/* close button positioning */
-
-.close {
-    position: absolute;
-    right: 0;
-}
-
-
-/* tempStyling for "Add" button */
-
-.btnAddToDo {
-    padding: 10px;
-    background: #d9d9d9;
-    color: #555;
-    text-align: center;
+#day:hover,
+.today:hover {
     cursor: pointer;
-    transition: 0.3s;
-    user-select: none;
-}
-
-.btnAddToDo:hover {
-    background-color: #bbb;
 }

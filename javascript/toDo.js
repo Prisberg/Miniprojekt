@@ -1,55 +1,65 @@
-/* Add close button to the right of To do items */
-const theToDos = document.querySelectorAll(".toDoItems");
-var a;
-for (a = 0; a < theToDos.length; a++) {
-    const span = document.createElement("span");
-    const symbol = document.createTextNode("\u00D7");
-    span.className = "close";
-    span.appendChild(symbol);
-    theToDos[a].appendChild(span);
+window.addEventListener('load', main);
+
+function main() {
+    addItemEvent();
+    todoCounterRender();
 }
 
-/* close button removes to do*/
-const close = document.getElementsByClassName('close')
-var i;
-for (i = 0; i < close.length; i++) {
-    close[i].onclick = function () {
-        const closeParent = this.parentElement;
-        closeParent.remove();
-    }
+function addItemEvent() {
+    let form = document.getElementById('this-form');
+    form.addEventListener('submit', checkIfEmpty);
 }
 
-/* The "Add" button functionality */
-const add = document.querySelector('.btnAddToDo')
-add.onclick = function () {
-    const li = document.createElement("li");
-    const inputValue = document.getElementById("toDoTextArea").value;
-    const txt = document.createTextNode(inputValue);
-    li.appendChild(txt);
-    if (inputValue === '') {
-        alert("You can't make an empty \"to do\"");
+function checkIfEmpty(event) {
+    event.preventDefault();
+    if (document.getElementById('todo-input').value === "") {
+        alert('Beskriv vad du vill lägga till.');
     } else {
-        document.getElementById("toDoItemsUL").appendChild(li);
-    }
-    document.getElementById("toDoTextArea").value = "";
-
-    const span = document.createElement("span");
-    const symbol = document.createTextNode("\u00D7");
-    span.className = "close";
-    span.appendChild(symbol);
-    li.appendChild(span);
-
-    for (a = 0; a < close.length; a++) {
-        close[a].onclick = function () {
-            const closeParent = this.parentElement;
-            closeParent.remove();
-        }
+        addItem();
     }
 }
-/* Check function */
-const checkList = document.querySelector('.toDoUL');
-checkList.addEventListener('click', function(ev) {
-    if (ev.target.tagName === 'LI') {
-        ev.target.classList.toggle('checked');
+
+function addItem() {
+    let list = document.getElementById('todo-list')
+    let todo = document.getElementById('todo-input').value;
+    let added = document.createElement('li');
+    added.id = 'list-item-id';
+    let divList = document.createElement('div');
+    divList.innerText = todo;
+    divList.id = 'divList';
+    let divClose = document.createElement('div');
+    divClose.innerText = 'X';
+    divClose.id = 'divClose';
+    added.appendChild(divList);
+    added.appendChild(divClose);
+    list.appendChild(added);
+    document.getElementById('todo-input').value = '';
+    divList.addEventListener('click', dashItem);
+    divClose.addEventListener('click', removeItem)
+    todoCounter();
+}
+
+function todoCounterRender() {
+    let today = document.querySelector('.today');
+    let amount = document.createElement('div');
+    amount.id = 'amount';
+    today.appendChild(amount);
+}
+
+function todoCounter() {
+    let listSize = document.querySelectorAll('li').length;
+    if (listSize === 0) {
+        amount.innerText = '';
+    } else {
+        amount.innerText = listSize;
     }
-}, false)
+}
+
+function dashItem(event) {
+    event.target.classList.toggle('finished');
+}
+
+function removeItem(event) {
+    event.target.parentNode.remove();
+    todoCounter();
+}
