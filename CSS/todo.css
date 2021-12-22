@@ -1,0 +1,66 @@
+form {
+    margin: 0;
+}
+
+fieldset {
+    border: none;
+    margin: 0;
+}
+
+.add-todo-field {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+#add-button {
+    background-color: #181818;
+    color: white;
+    border-color: white;
+    cursor: pointer;
+}
+
+input {
+    background-color: #181818;
+    border: none;
+    color: white;
+}
+
+::placeholder {
+    color: white;
+}
+
+ul {
+    padding: 0 1rem;
+    list-style-type: none;
+}
+
+li {
+    user-select: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+#divList,
+#divClose {
+    cursor: pointer;
+}
+
+.finished {
+    text-decoration: line-through;
+    text-decoration-color: red;
+    text-decoration-thickness: 3px;
+}
+
+#divClose {
+    color: red;
+}
+
+#amount {
+    position: absolute;
+    color: red;
+    font-size: large;
+    margin-right: .2rem;
+    bottom: 0;
+    right: 0;
+}
