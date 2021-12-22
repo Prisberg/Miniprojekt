@@ -12,14 +12,12 @@ function renderOldDays() {
     let fd = new Date(y, m, 1).getDay();
     for (i = 1; i < fd; i++) {
         let oldday = document.createElement('div');
-        //oldday.id = 'oldday';
         document.getElementById('day-grid').appendChild(oldday);
     }
 }
 
 function renderGrid() {
     let d = new Date();
-    let prevm = d.getMonth();
     let m = d.getMonth() + 1;
     let y = d.getFullYear();
     days = new Date(y, m, 0).getDate();
