@@ -1,5 +1,27 @@
 @media screen and (max-width: 992px) {
     .right-side {
+        width: 65%;
+        transition: 0.5s;
+    }
+    .left-side {
+        width: 35%;
+        transition: 0.5s;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .right-side {
+        width: 50;
+        transition: 0.5s;
+    }
+    .left-side {
+        width: 50%;
+        transition: 0.5s;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .right-side {
         display: none;
     }
     .left-side {
