@@ -14,12 +14,12 @@
     <link rel="stylesheet" href="./CSS/mediaqueries.css">
     <link rel="stylesheet" href="./CSS/style.css">
     <link rel="stylesheet" href="./CSS/todo.css">
-    <title>Document</title>
+    <title>Calendar with todo functionality</title>
 </head>
 
 <body>
-    <div class="main-content">
-        <div class="left-side">
+    <div class="main-content flex">
+        <div class="left-side flex justifycenter aligncenter">
             <div class="todo-top">
                 <h2 id="currentweekday"></h2>
                 <h2 id="currentdate"></h2>
@@ -28,7 +28,7 @@
             <div class="todo-content">
                 <form id="this-form">
                     <fieldset>
-                        <legend>Lägg till dagens todo</legend>
+                        <legend>Lägg till Todo</legend>
                         <div class="add-todo-field">
                             <input autocomplete="off" type="text" name="" id="todo-input" placeholder="Din nya todo...">
                             <button id="add-button"><i class="fas fa-plus"></i></button>
@@ -39,11 +39,11 @@
             </div>
         </div>
         <div class="right-side">
-            <div class="calendar-title">
-                <h1>Min kalender.</h1>
+            <div class="textcenter">
+                <h1 class="hideoverflow">Min kalender</h1>
             </div>
-            <div class="month-title">
-                <h1 id="currentmonth"></h1>
+            <div class="month-title textcenter">
+                <h1 class="hideoverflow" id="currentmonth"></h1>
             </div>
             <div class="days-of-week">
                 <div>Måndag</div>
