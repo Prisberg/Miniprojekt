@@ -48,29 +48,32 @@ function addItem() {
 
 //Set counter to specific date
 function todoCounter() {
-    let allDaysOfCurrentMonth = document.getElementsByClassName('day');
+    //const allDaysOfCurrentMonth = document.getElementsByClassName('day');
     const allAmounts = document.getElementsByClassName('amount')
 
     let inputValue = document.getElementById('date-picker').value;
     let inputDayNr = inputValue.substr(8, 9);
-    let inputMonthYear = inputValue.substr(0, 7);
+    let inputYearMonth = inputValue.substr(0, 7);
+    //todoDeadLine for reading which date the todo should be added to. nrDiv is an array of the amount divs on each day, getting the specific date with same process as todoDeadline.
+    //let todoDeadLine = allDaysOfCurrentMonth[inputDayNr - 1]
+    let nrDiv = allAmounts[inputDayNr - 1]
+    let nrOfTodos = Number(nrDiv.innerText)
 
-    let yearMonth;
-    //todoDeadLine for reading which date the todo should be added to. theAmount is an array of the amount divs on each day, getting the specific date with same process as todoDeadline.
-    let todoDeadLine = allDaysOfCurrentMonth[inputDayNr - 1]
-    let theAmount = allAmounts[inputDayNr - 1]
+
+    let jsYearMonth;
 
     //In order to get correct syntax between html input and js date.
     if (m <= 9) {
-        yearMonth = `${y}-0${m}`;
+        jsYearMonth = `${y}-0${m}`;
     } else {
-        yearMonth = `${y}-${m}`;
+        jsYearMonth = `${y}-${m}`;
     }
     //js date compared to html date, if same year/month then counter is added to specific date
-    if (yearMonth === inputMonthYear) {
-        listDate();
-        theAmount.innerHTML = ("1")
+    if (jsYearMonth === inputYearMonth) {
+        nrOfTodos++
+        nrDiv.innerHTML = (`${nrOfTodos}`)
         
+        listDate();
     } else {
         return;
     }
@@ -80,7 +83,7 @@ function todoCounter() {
 function listDate() {
     let listItems = document.querySelectorAll('.divList')
 
-    console.log(listItems[0].innerText)
+    console.log(listItems[listItems.length - 1].innerText)
 }
 
 function dashItem(event) {
