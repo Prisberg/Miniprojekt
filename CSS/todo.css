@@ -37,7 +37,7 @@ li {
     justify-content: space-between;
 }
 
-#divList,
+.divList,
 #divClose {
     cursor: pointer;
 }
@@ -52,7 +52,7 @@ li {
     color: red;
 }
 
-#amount {
+.amount {
     position: absolute;
     color: red;
     font-size: 3vmin;
