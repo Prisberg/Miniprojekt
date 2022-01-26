@@ -36,29 +36,25 @@ function addItem() {
     divList.className = 'divList';
     let divClose = document.createElement('div');
     divClose.innerText = 'X';
-    divClose.id = 'divClose';
+    divClose.className = 'divClose';
     added.appendChild(divList);
     added.appendChild(divClose);
     list.appendChild(added);
     document.getElementById('todo-input').value = '';
     divList.addEventListener('click', dashItem);
     divClose.addEventListener('click', removeItem);
-    todoCounter();
+    todoCounterAdd();
 }
 
 //Set counter to specific date
-function todoCounter() {
-    //const allDaysOfCurrentMonth = document.getElementsByClassName('day');
+function todoCounterAdd() {
+    const inputValue = document.getElementById('date-picker').value;
+    const inputDayNr = inputValue.substr(8, 9);
+    const inputYearMonth = inputValue.substr(0, 7);
+
     const allAmounts = document.getElementsByClassName('amount')
-
-    let inputValue = document.getElementById('date-picker').value;
-    let inputDayNr = inputValue.substr(8, 9);
-    let inputYearMonth = inputValue.substr(0, 7);
-    //todoDeadLine for reading which date the todo should be added to. nrDiv is an array of the amount divs on each day, getting the specific date with same process as todoDeadline.
-    //let todoDeadLine = allDaysOfCurrentMonth[inputDayNr - 1]
-    let nrDiv = allAmounts[inputDayNr - 1]
-    let nrOfTodos = Number(nrDiv.innerText)
-
+    const nrDiv = allAmounts[inputDayNr - 1]
+    let nrOfTodos = Number(nrDiv.innerHTML)
 
     let jsYearMonth;
 
@@ -68,22 +64,14 @@ function todoCounter() {
     } else {
         jsYearMonth = `${y}-${m}`;
     }
+
     //js date compared to html date, if same year/month then counter is added to specific date
     if (jsYearMonth === inputYearMonth) {
         nrOfTodos++
         nrDiv.innerHTML = (`${nrOfTodos}`)
-        
-        listDate();
     } else {
         return;
     }
-}
-
-//count the todo list items that end with same date, add the count to calendar counter 🤷‍♂️
-function listDate() {
-    let listItems = document.querySelectorAll('.divList')
-
-    console.log(listItems[listItems.length - 1].innerText)
 }
 
 function dashItem(event) {
@@ -91,8 +79,34 @@ function dashItem(event) {
 }
 
 function removeItem(event) {
-    event.target.parentNode.remove();
-    todoCounter();
+    const toDoYMD = event.target.parentNode.innerText.slice(-12, -1)
+    const toDoYM = toDoYMD.slice(0, 7)
+    const toDoD = toDoYMD.slice(-3, -1)
+
+    const allAmounts = document.getElementsByClassName('amount')
+    const nrDiv = allAmounts[toDoD - 1]
+    let nrOfTodos = Number(nrDiv.innerHTML)
+
+    let jsYearMonth;
+
+    //In order to get correct syntax between html input and js date.
+    if (m <= 9) {
+        jsYearMonth = `${y}-0${m}`;
+    } else {
+        jsYearMonth = `${y}-${m}`;
+    }
+
+    if (toDoYM === jsYearMonth) {
+        if (nrOfTodos === 1) {
+            nrDiv.innerHTML = (``)
+        } else {
+            nrOfTodos--
+            nrDiv.innerHTML = (`${nrOfTodos}`)
+        }
+
+        event.target.parentNode.remove();
+
+    }
 }
 
 //date picker min value is current date
