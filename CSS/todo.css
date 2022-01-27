@@ -37,8 +37,8 @@ li {
     justify-content: space-between;
 }
 
-#divList,
-#divClose {
+.divList,
+.divClose {
     cursor: pointer;
 }
 
@@ -48,11 +48,11 @@ li {
     text-decoration-thickness: 3px;
 }
 
-#divClose {
+.divClose {
     color: red;
 }
 
-#amount {
+.amount {
     position: absolute;
     color: red;
     font-size: 3vmin;

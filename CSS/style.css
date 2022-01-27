@@ -8,6 +8,7 @@ body {
     color: white;
     height: 100vh;
     width: 100vw;
+    font-family: sans-serif;
 }
 
 .main-content {
@@ -74,17 +75,18 @@ body {
     font-size: x-large;
 }
 
-.today {
-    position: relative;
-    background-color: #89CFF0;
+.day {
+    background-color: white;
+    color: black;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
-#day {
-    background-color: white;
-    color: black;
+.today {
+    position: relative;
+    background-color: #89CFF0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -97,4 +99,9 @@ body {
 #day:hover,
 .today:hover {
     cursor: pointer;
+}
+
+#date-picker {
+    color: black;
+    background-color: white;
 }

@@ -11,8 +11,7 @@ function main() {
 
 function renderCurrentDay() {
     const weekday = ["Söndag", "Måndag", "Tisdag", "Onsdag", "Torsdag", "Fredag", "Lördag"];
-    const d = new Date();
-    document.getElementById('currentweekday').innerHTML = "Idag är det " + weekday[d.getDay()];
+    document.getElementById('currentweekday').innerHTML = "Idag är det " + weekday[dmy.getDay()];
 }
 
 function endOfDateFix(i) {
@@ -25,28 +24,20 @@ function endOfDateFix(i) {
 
 function renderCurrentDate() {
     const month = ["Januari", "Februari", "Mars", "April", "Maj", "Juni", "Juli", "Augusti", "September", "Oktober", "November", "December"];
-    const d = new Date();
-
-    document.getElementById('currentdate').innerHTML = endOfDateFix(d.getDate()) + " " + month[d.getMonth()] + " " + d.getFullYear();
+    document.getElementById('currentdate').innerHTML = endOfDateFix(dmy.getDate()) + " " + month[dmy.getMonth()] + " " + dmy.getFullYear();
 
 }
 
 function renderCurrentMonth() {
     const month = ["Januari", "Februari", "Mars", "April", "Maj", "Juni", "Juli", "Augusti", "September", "Oktober", "November", "December"];
-    const d = new Date();
-
-    document.getElementById('currentmonth').innerHTML = month[d.getMonth()];
+    document.getElementById('currentmonth').innerHTML = month[dmy.getMonth()];
 }
 
 function renderCurrentTime() {
-    const d = new Date();
-
-    document.getElementById('currenttime').innerHTML = "och klockan är " + d.toLocaleTimeString() + ".";
+    document.getElementById('currenttime').innerHTML = "och klockan är " + dmy.toLocaleTimeString() + ".";
 }
 
 function showNextMonth() {
     const month = ["Januari", "Februari", "Mars", "April", "Maj", "Juni", "Juli", "Augusti", "September", "Oktober", "November", "December"];
-    const d = new Date();
-
-    document.getElementById('next-month').innerHTML = month[d.getMonth()] - 1;
+    document.getElementById('next-month').innerHTML = month[dmy.getMonth()] - 1;
 }
