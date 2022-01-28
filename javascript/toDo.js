@@ -103,10 +103,8 @@ function removeItem(event) {
             nrOfTodos--
             nrDiv.innerHTML = (`${nrOfTodos}`)
         }
-
-        event.target.parentNode.remove();
-
     }
+    event.target.parentNode.remove();
 }
 
 //date picker min value is current date
