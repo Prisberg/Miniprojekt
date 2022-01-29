@@ -1,8 +1,9 @@
 //Global variables
-const dmy = new Date();
-const d = dmy.getDate();
-const m = dmy.getMonth() + 1;
-const y = dmy.getFullYear();
+let  dmy = new Date();
+let  d = dmy.getDate();
+let  m = dmy.getMonth() + 1;
+let mNoPLus = dmy.getMonth();
+let  y = dmy.getFullYear();
 
 window.addEventListener('load', main);
 
